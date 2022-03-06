@@ -1,7 +1,6 @@
-const handlerPromise = (promise) => {
+const handlePromise = (promise) => {
     return promise
         .then((data) => [null, data])
-        .then((erorr) => [erorr, undefined]);
+        .catch((err) => [err, undefined]);
 };
-
-modele.exports = handlerPromise;
+module.exports = handlePromise;
